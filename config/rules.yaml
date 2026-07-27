@@ -1,0 +1,4 @@
+service: rlm-release
+port: 8799
+database:
+  url: sqlite:///data/rlm-release.sqlite
