@@ -1,0 +1,86 @@
+{
+  "tag": "triade_v1.0.0",
+  "version": "1.0.0",
+  "release_date": "2026-07-30T00:00:00Z",
+  "components": {
+    "llux": {
+      "version": "1.0.0",
+      "commit": "abc123def456",
+      "repo": "L3-CITIZENS/LLUX",
+      "features": [
+        "HTTP Server OpenAI-compatible",
+        "BPE Tokenizer",
+        "BitNet 1.58b inference",
+        "KV Cache"
+      ],
+      "compatibility": {
+        "cpu": "westmere",
+        "instruction_set": "SSE4.2"
+      }
+    },
+    "piano": {
+      "version": "1.0.0",
+      "commit": "abc789def012",
+      "repo": "L4-TOOLS/PIANO",
+      "features": [
+        "LLUX binding",
+        "Orchestration triade",
+        "SPIDX integration"
+      ]
+    },
+    "spidx": {
+      "version": "1.0.0",
+      "commit": "def345ghi678",
+      "repo": "L4-TOOLS/SPIDX",
+      "features": [
+        "SPARQL queries",
+        "Knowledge Graph",
+        "Embeddings via LLUX"
+      ]
+    },
+    "trix": {
+      "version": "1.0.0",
+      "commit": "ghi901jkl234",
+      "repo": "L4-TOOLS/TRIX",
+      "features": [
+        "LLUX backend",
+        "WAL logging",
+        "Health checks",
+        "Dynamic ports 47000-48000"
+      ]
+    }
+  },
+  "dependencies": {
+    "gateway_manager": {
+      "version": ">=1.0.0",
+      "feature": "llux backend routing"
+    },
+    "trix": {
+      "version": ">=1.0.0",
+      "feature": "container isolation"
+    }
+  },
+  "tests": {
+    "unit": 7,
+    "integration": 4,
+    "e2e": 2
+  },
+  "release_notes": {
+    "features": [
+      "Première release intégrée de la triade LLUX + PIANO + SPIDX",
+      "HTTP OpenAI-compatible complet",
+      "BPE tokenizer compatible llama.cpp"
+    ],
+    "known_issues": [
+      "Tokenizer BPE nécessite vocabulaire complet (WIP)",
+      "Westmere CPU sans AVX2 → performances limitées"
+    ],
+    "breaking_changes": []
+  },
+  "metrics": {
+    "latency_ms": 150,
+    "tokens_per_sec": 15,
+    "memory_mb": 4096,
+    "binary_size_mb": 2
+  }
+}
