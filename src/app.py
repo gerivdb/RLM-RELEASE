@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 app = Flask(__name__)
 
-PORT = int(os.environ.get("PORT", 8799))
+PORT = int(os.environ.get("PORT", 8800))
 RELEASES: dict = {}
 
 
